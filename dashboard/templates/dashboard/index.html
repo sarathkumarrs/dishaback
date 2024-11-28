@@ -1,6 +1,6 @@
 {% extends 'dashboard/base.html' %}
 
-{% block title %} Dr.Rema devi | Dashboard {% endblock %}
+{% block title %} Dr. Rema devi | Dashboard {% endblock %}
 {% block content %}
 
 {% load static %}
@@ -32,14 +32,17 @@
         border-radius: 8px;
         margin-bottom: 20px;
         text-align: center;
-        border: 1px solid #ccc; /* Add border property */
+        border: 1px solid #ccc;
+        /* Add border property */
     }
 
     .count-box h2 {
         margin: 0;
         font-size: 24px;
-        font-weight: bold; /* Add font-weight property */
-        color: #333; /* Add color property */
+        font-weight: bold;
+        /* Add font-weight property */
+        color: #333;
+        /* Add color property */
     }
 </style>
 
@@ -51,7 +54,7 @@
         <h4>Pending Appointments: {{ pending_appointments }}</h4>
         <h4>Scheduled Appointments: {{ scheduled_appointments }}</h4>
     </div>
-   
+
 
     <div class="count-box">
         <h2>Number of Patients: {{ patient_count }}</h2>
