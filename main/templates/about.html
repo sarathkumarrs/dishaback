@@ -18,6 +18,19 @@
         width: 25rem;
         border-radius:3rem 0;
     }
+    .gallery-img {
+        width: 100%;
+        height: 15rem;
+        object-fit: cover;
+        border-radius: 1rem;
+        margin-bottom: 1rem;
+    }
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin: 1.5rem 0;
+    }
     @media (max-width: 767px) {
         .img1{
             height: 27rem;
@@ -29,7 +42,10 @@
     }
     .max1 {
     max-width: 100%;
-}
+    }
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
     }
     @media (min-width: 700px) and (max-width: 1200px) {
         .im{
@@ -45,8 +61,10 @@
     }
     .max1 {
     max-width: 100%;
-}
-
+    }
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
     }
  </style>  
 
@@ -78,6 +96,17 @@
         <div class="flex gap-8 ipad_min:grid mobile:grid phone_max:grid">
             <div class="">
                 <div><img src="{% static 'image/gallery4.jpg' %}" alt="" class="img1"></div>
+                
+                <!-- Additional images in left column -->
+                <div class="gallery-grid">
+                    <img src="{% static 'image/gallery10.png' %}" alt="" class="gallery-img">
+                    <img src="{% static 'image/gallery22 (1).jpg' %}" alt="" class="gallery-img">
+                    <!-- Extra Image 1 -->
+                    <img src="{% static 'image/gallery22 (3).jpg' %}" alt="" class="gallery-img">
+                    <!-- Extra Image 2 -->
+                    <img src="{% static 'image/gallery23.jpg' %}" alt="" class="gallery-img">
+                </div>
+                
                 <div class="cor bg-baseprimary p-6 font-montasorrat my-10 ipad_min:hidden mobile:hidden phone_max:hidden">
                     <p>The counselling approach is based on the principles of humanistic psychology, which emphasizes the inherent worth and potential of every person. I believe that everyone has the ability to grow and change, given the right environment and support. Various techniques such as active listening, empathy, unconditional positive regard, goal setting, problem solving, cognitive restructuring, relaxation training, mindfulness meditation, and positive affirmations are used to help my clients to cope with their challenges and achieve their goals.</p>
                     <p class="my-4">Every client is treated as a unique individual with their own strengths and weakness. Counselling sessions are according to the specific situation and preferences for each client. I also respect the cultural and religious backgrounds of my clients, and do not impose my own values or beliefs on them.</p>
@@ -88,27 +117,46 @@
                 <h1 class="font-artifika text-4xl my-2 ipad_min:text-2xl mobile:text-2xl">Dr.Rema Devi A</h1>
                 <h2 class="font-montasorrat text-xl text-gray-500 ipad_min:text-lg mobile:text-lg">Counselling Psychologist</h2>
                 <p class="font-montasorrat my-6">A leading COUNSELLING PSYCHOLOGIST & AN EDUCATOR in Kodungallur, Thrissur District of Kerala.</p>
-                <p class="font-montasorrat my-6">God’s   Blessings come as Surprises.  Blessed  to  have born  and  brought up by  my  Parents, Late Chandra Varma Thampan and Malathy Kunjamma in  a  Middle  Class  Family  in  Kodungallur. Graduated from  St. Joseph’s  College in  Zoology, did  B.Ed  and  M.Ed. with Guidance  and  Counselling  was  Optional Subject.  Got married to Adv. A.S.Rajendran Nair [ In Kerala Highcourt, at present  and Patent attorney ], shifted  to  Belgaum District  of  Karnataka  and from  there to  Mumbai. During the Life in Mumbai about 20 years, worked as a High School Teacher in  Maths  and  Science. Along with  the  profession , I  could  do School Counsellor’s  Course,  M.Sc  Psychology  and  an  International  Commonwealth Diploma in ‘Youth  in  Development’. Won ‘Best Teacher Award’ thrice.  Returned  to  Kerala and  settled  here  in  2008 and continued  the  Profession  as  Principal in  Charge  and  Professor in Educational  Psychology  in  a  B.Ed.  College.   During this  period  of  10 years,  did M.Sc  in  Counselling  and  Family  Therapy and  M.Phil  in  Counselling  Psychology.</p>
+                <p class="font-montasorrat my-6">God's Blessings come as Surprises.  Blessed  to  have born  and  brought up by  my  Parents, Late Chandra Varma Thampan and Malathy Kunjamma in  a  Middle  Class  Family  in  Kodungallur. Graduated from  St. Joseph's  College in  Zoology, did  B.Ed  and  M.Ed. with Guidance  and  Counselling  was  Optional Subject.  Got married to Adv. A.S.Rajendran Nair [ In Kerala Highcourt, at present  and Patent attorney ], shifted  to  Belgaum District  of  Karnataka  and from  there to  Mumbai. During the Life in Mumbai about 20 years, worked as a High School Teacher in  Maths  and  Science. Along with  the  profession , I  could  do School Counsellor's  Course,  M.Sc  Psychology  and  an  International  Commonwealth Diploma in 'Youth  in  Development'. Won 'Best Teacher Award' thrice.  Returned  to  Kerala and  settled  here  in  2008 and continued  the  Profession  as  Principal in  Charge  and  Professor in Educational  Psychology  in  a  B.Ed.  College.   During this  period  of  10 years,  did M.Sc  in  Counselling  and  Family  Therapy and  M.Phil  in  Counselling  Psychology.</p>
+                
                 <div class="flex my-6 ipad_min:grid mobile:grid mobile:w-full ipad:grid">
                     <img src="{% static 'image/gallery2.jpg' %}" alt="" class="max1">
-                    <img src="{% static 'image/gallery10.png' %}" alt="" class="max  ">
+                    <img src="{% static 'image/gallery26.jpg' %}" alt="" class="max">
                 </div>
-                <p class="font-montasorrat my-10">Started “Disha” Counselling Centre at home, and Conducting Awareness programs Teacher development programs, Counselling  Sessions, Motivation  classes, Parenting  Sessions  etc. Till Date. Blessed to  have  an  Opportunity  to be  a Psychology  Professor  for P.G classes  in  St. Joseph’s   College Irinjalakuda.</p>
+                
+                <!-- Additional images in main content -->
+                <div class="gallery-grid">
+                    <img src="{% static 'image/gallery7.jpg' %}" alt="" class="gallery-img">
+                    <img src="{% static 'image/gallery1.jpg' %}" alt="" class="gallery-img">
+                    <!-- Extra Image 3 -->
+                    <img src="{% static 'image/gallery3.jpg' %}" alt="" class="gallery-img">
+                    <!-- Extra Image 4 -->
+                    <img src="{% static 'image/gallery24.jpg' %}" alt="" class="gallery-img">
+                </div>
+                
+                <p class="font-montasorrat my-10">Started "Disha" Counselling Centre at home, and Conducting Awareness programs Teacher development programs, Counselling  Sessions, Motivation  classes, Parenting  Sessions  etc. Till Date. Blessed to  have  an  Opportunity  to be  a Psychology  Professor  for P.G classes  in  St. Joseph's   College Irinjalakuda.</p>
+                
                 <div class="cor bg-baseprimary p-6 font-montasorrat my-10 hidden ipad_min:block mobile:block">
                     <p>The counselling approach is based on the principles of humanistic psychology, which emphasizes the inherent worth and potential of every person. I believe that everyone has the ability to grow and change, given the right environment and support. Various techniques such as active listening, empathy, unconditional positive regard, goal setting, problem solving, cognitive restructuring, relaxation training, mindfulness meditation, and positive affirmations are used to help my clients to cope with their challenges and achieve their goals.</p>
                     <p class="my-4">Every client is treated as a unique individual with their own strengths and weakness. Counselling sessions are according to the specific situation and preferences for each client. I also respect the cultural and religious backgrounds of my clients, and do not impose my own values or beliefs on them.</p>
                 </div>
+                
                 <div class="flex gap-6 ipad_min:grid mobile:grid ipad:grid">
                     <img src="{% static 'image/gallery8.jpg' %}" alt="" class="max">
                     <div class="font-montasorrat">
                         <p class="my-5">Learned Classical Music and  Violin along  with  my  Passion  in Teaching &  Learning, and  Organizing  Various  Programs. These Experiences inspired to have a <strong>Ph.D.  to Help Me to Help Others in Profession and Life.</strong></p>
                         {% comment %} <p>" Knowledge and Ability are within us….There is a solution for any problem "</p>  {% endcomment %}
-                        <strong>New ‘DISHA’ Counselling Centre</strong><br><br>
-                            <p>‘AGRASALA’, South Nada,<br> Opp. Bhima Jewelry,<br> Kodungallur, Thrissur [Dt.],<br> Kerala-680 664. <br>
+                        <strong>New 'DISHA' Counselling Centre</strong><br><br>
+                            <p>'AGRASALA', South Nada,<br> Opp. Bhima Jewelry,<br> Kodungallur, Thrissur [Dt.],<br> Kerala-680 664. <br>
                             e-mail: remaagrasala18@gmail.com</p> 
                     </div>
-                    
                 </div>
+                
+                <!-- One more additional image at the bottom -->
+                <div class="my-8">
+                    <img src="{% static 'image/gallery11.jpg' %}" alt="" class="w-full h-64 object-cover rounded-lg">
+                </div>
+                
                 <br><br>
                 <p>Knowledge and Ability are within us….There is a solution for any problem</p>
             </div>
